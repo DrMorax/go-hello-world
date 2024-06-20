@@ -5,14 +5,21 @@ import (
 )
 
 const englishHelloPrefix = "Hello, "
+const spanishHelloPrefix = "Hola, "
 
-func Hello(name string) string {
+func Hello(name string, language string) string {
 	if name == "" {
-        name = "World"
+        name = "Traveler"
     }
-	return englishHelloPrefix + name
+
+	switch language {
+		case "Spanish":
+            return spanishHelloPrefix + name
+        default:
+            return englishHelloPrefix + name
+	}
 }
 
 func main() {
-	fmt.Println(Hello("Abbas"))
+	fmt.Println(Hello("", ""))
 }

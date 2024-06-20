@@ -22,5 +22,4 @@ func Hello(name string, language string) string {
 
 func main() {
 	fmt.Println(Hello("Abbas"))
->>>>>>>>> Temporary merge branch 2
 }

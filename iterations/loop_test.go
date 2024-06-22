@@ -6,19 +6,19 @@ import (
 )
 
 func TestLoop(t *testing.T) {
-	repeated := Loop("a", 5)
+	got := Loop("a", 5)
 	expected := "aaaaa"
 
-	if repeated != expected {
-		t.Errorf("got %q expected %q", repeated, expected)
+	if got != expected {
+		t.Errorf("got %q expected %q", got, expected)
 	}
 }
 
 func ExampleLoop() {
-	repeated := "a"
+	got := "a"
 	repeatCount := 5
 
-	fmt.Println(Loop(repeated, repeatCount))
+	fmt.Println(Loop(got, repeatCount))
 	// Output: aaaaa
 }
 
